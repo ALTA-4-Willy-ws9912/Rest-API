@@ -1,0 +1,79 @@
+{
+	"info": {
+		"_postman_id": "b8483c8f-cc3e-4ec2-8377-0f6f45a944e8",
+		"name": "News API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21262734",
+		"_collection_link": "https://solar-station-877467.postman.co/workspace/My-Workspace~b6c24123-8fb2-4198-884f-94206920bbfe/collection/21262734-b8483c8f-cc3e-4ec2-8377-0f6f45a944e8?action=share&source=collection_link&creator=21262734"
+	},
+	"item": [
+		{
+			"name": "Get News API",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{news_api-key}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://newsapi.org/v2/everything?q=bitcoin",
+					"protocol": "https",
+					"host": [
+						"newsapi",
+						"org"
+					],
+					"path": [
+						"v2",
+						"everything"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "bitcoin"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer"
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "news_api-key",
+			"value": "6d57bac8a98e4da7b29c525020f52abf",
+			"type": "string"
+		}
+	]
+}
